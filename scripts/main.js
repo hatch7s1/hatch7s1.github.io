@@ -8,18 +8,13 @@ function readFromCSV(path) {
         let allText = rawFile.responseText;
         let out = CSV.parse(allText);
         let trainees = convertCSVArrayToTraineeData(out);
+        console.log('trainee', trainees);
         populateTable(trainees);
       }
     }
   };
   rawFile.send(null);
 }
-
-// function readFromCSV() {
-//   let out = [["Cha Hyunjin", "Individual","B","t","1"],["Park Seunghyeon","Empire Music","A","t","2"]];
-//   let trainees = convertCSVArrayToTraineeData(out);
-//   populateTable(trainees);
-// }
 
 function findTraineeById(id) {
   for (let i = 0; i < trainees.length; i++) {
@@ -160,7 +155,7 @@ function clearRanking() {
 function populateTable(trainees) {
   // Currently just duplicates the first table entry
   let table = document.getElementById("table__entry-container");
-  console.log(table);
+  exampleEntry = table.children[0];
   for (let i = 0; i < trainees.length; i++) {
     // generate and insert the html for a new trainee table entry
     table.insertAdjacentHTML("beforeend", populateTableEntry(trainees[i]));
@@ -205,7 +200,6 @@ function populateRanking() {
   let currRank = 1;
   for (let i = 0; i < rowNums.length; i++) {
     let rankRow = rankRows[i];
-    console.log('rabj', rankRow);
     for (let j = 0; j < rowNums[i]; j++) {
       let currTrainee = ranking[currRank-1];
       rankRow.insertAdjacentHTML("beforeend", populateRankingEntry(currTrainee, currRank))

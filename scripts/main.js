@@ -232,8 +232,8 @@ function populateRanking() {
 function populateRankingEntry(trainee, currRank) {
   let modifiedCompany = trainee.company.toUpperCase();
   modifiedCompany = modifiedCompany.replace("ENTERTAINMENT", "ENT.");
-  let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top7 = (trainee.status === 't') && "top7";
+  let eliminated = (showEliminated && trainee.eliminated) ? "eliminated" : "";
+  let top7 = (trainee.top7);
   const rankingEntry = `
   <div class="ranking__entry ${eliminated}">
     <div class="ranking__entry-view">
@@ -366,7 +366,7 @@ var trainees = [];
 var filteredTrainees = [];
 // holds the ordered list of rankings that the user selects
 var ranking = newRanking();
-const rowNums = [1, 2, 3];
+const rowNums = [1, 2, 4];
 //window.addEventListener("load", function () {
   populateRanking();
   readFromCSV("./trainee_info.csv");

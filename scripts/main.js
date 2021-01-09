@@ -81,7 +81,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.grade = traineeArray[2];
     trainee.eliminated = traineeArray[3] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
     trainee.top7 = traineeArray[3] === 't'; // sets trainee to top 12 if 't' appears in 6th column
-    trainee.id = parseInt(traineeArray[4]) - 1; // trainee id is the original ordering of the trainees in the first csv
+    trainee.id = parseInt(traineeArray[4]); // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "").toLowerCase() + ".jpg";
     return trainee;

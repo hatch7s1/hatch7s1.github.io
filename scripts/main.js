@@ -160,7 +160,6 @@ function clearRanking() {
 function populateTable(trainees) {
   // Currently just duplicates the first table entry
   let table = document.getElementById("table__entry-container");
-  exampleEntry = table.children[0];
   for (let i = 0; i < trainees.length; i++) {
     // generate and insert the html for a new trainee table entry
     table.insertAdjacentHTML("beforeend", populateTableEntry(trainees[i]));

@@ -172,7 +172,7 @@ function populateTableEntry(trainee) {
   let eliminated = (showEliminated && trainee.status === 'e') && "eliminated";
   let top7 = (trainee.status === 'e') && "top7";
   const tableEntry = `
-  <div class="table__entry ${eliminated}">
+  <div class="table__entry ${eliminated ? 'eliminated' : ''}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
       <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>

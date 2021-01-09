@@ -1,0 +1,282 @@
+[
+	{
+		"name_romanized": "Cha Hyunjin",
+		"company": "Individual",
+		"grade": "B",
+		"status": "t",
+		"id": 1
+	},
+	{
+		"name_romanized": "Park Seunghyeon",
+		"company": "Empire Music",
+		"grade": "A",
+		"status": "t",
+		"id": 2
+	},
+	{
+		"name_romanized": "Park Heewoo",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "t",
+		"id": 3
+	},
+	{
+		"name_romanized": "Bong Daeshim",
+		"company": "Anterograde",
+		"grade": "A",
+		"status": "t",
+		"id": 4
+	},
+	{
+		"name_romanized": "Lee Jungmin",
+		"company": "Boorirang Ent",
+		"grade": "A",
+		"status": "t",
+		"id": 5
+	},
+	{
+		"name_romanized": "Nishimura Ryota",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "t",
+		"id": 6
+	},
+	{
+		"name_romanized": "Kim Daejun",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "t",
+		"id": 7
+	},
+	{
+		"name_romanized": "Liu Bongyoung",
+		"company": "Boorirang Ent",
+		"grade": "B",
+		"status": "t",
+		"id": 8
+	},
+	{
+		"name_romanized": "Kwon Eunjae",
+		"company": "Empire Music",
+		"grade": "B",
+		"status": "t",
+		"id": 9
+	},
+	{
+		"name_romanized": "Hwang Yiseong",
+		"company": "QQ Star",
+		"grade": "B",
+		"status": "t",
+		"id": 10
+	},
+	{
+		"name_romanized": "Kim Ganghan",
+		"company": "Boorirang Ent",
+		"grade": "B",
+		"status": "t",
+		"id": 11
+	},
+	{
+		"name_romanized": "Harsa Angkadiredja",
+		"company": "Empire Music",
+		"grade": "A",
+		"status": "t",
+		"id": 12
+	},
+	{
+		"name_romanized": "Seonu Seonhee",
+		"company": "Empire Music",
+		"grade": "A",
+		"status": "t",
+		"id": 13
+	},
+	{
+		"name_romanized": "Heo Seojoon",
+		"company": "QQ Star",
+		"grade": "B",
+		"status": "t",
+		"id": 14
+	},
+	{
+		"name_romanized": "Bang Hojin",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 15
+	},
+	{
+		"name_romanized": "Jeon Jaehwa",
+		"company": "Boorirang Ent",
+		"grade": "A",
+		"status": "e",
+		"id": 16
+	},
+	{
+		"name_romanized": "Hong Joowon",
+		"company": "Boorirang Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 17
+	},
+	{
+		"name_romanized": "Yoo Ilyong",
+		"company": "Black Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 18
+	},
+	{
+		"name_romanized": "Feng Lian",
+		"company": "ISPS",
+		"grade": "A",
+		"status": "e",
+		"id": 19
+	},
+	{
+		"name_romanized": "Hwang Minkyu",
+		"company": "ISPS",
+		"grade": "A",
+		"status": "e",
+		"id": 20
+	},
+	{
+		"name_romanized": "Shinsato Tetsuya",
+		"company": "Boorirang Ent",
+		"grade": "A",
+		"status": "e",
+		"id": 21
+	},
+	{
+		"name_romanized": "Do Jihoon",
+		"company": "Anterograde",
+		"grade": "B",
+		"status": "e",
+		"id": 22
+	},
+	{
+		"name_romanized": "Oh Yeseon",
+		"company": "Platinum Mgmt",
+		"grade": "B",
+		"status": "e",
+		"id": 23
+	},
+	{
+		"name_romanized": "Ahn Kyungsoo",
+		"company": "Individual",
+		"grade": "A",
+		"status": "e",
+		"id": 24
+	},
+	{
+		"name_romanized": "Yoon Baekhwan",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 25
+	},
+	{
+		"name_romanized": "Matthew Soeharsono",
+		"company": "Individual",
+		"grade": "B",
+		"status": "e",
+		"id": 26
+	},
+	{
+		"name_romanized": "Nam Daehan",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 27
+	},
+	{
+		"name_romanized": "Shin Haneul",
+		"company": "Encore Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 28
+	},
+	{
+		"name_romanized": "Zhong Nianzhen",
+		"company": "QQ Star",
+		"grade": "B",
+		"status": "e",
+		"id": 29
+	},
+	{
+		"name_romanized": "Song Jiwoon",
+		"company": "Encore Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 30
+	},
+	{
+		"name_romanized": "Jeon Minwoo",
+		"company": "Black Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 31
+	},
+	{
+		"name_romanized": "Li Haoran",
+		"company": "ISPS",
+		"grade": "A",
+		"status": "e",
+		"id": 32
+	},
+	{
+		"name_romanized": "Young Jaehan",
+		"company": "Black Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 33
+	},
+	{
+		"name_romanized": "Wattana Metharom",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 34
+	},
+	{
+		"name_romanized": "Han Hyesung",
+		"company": "Individual",
+		"grade": "B",
+		"status": "e",
+		"id": 35
+	},
+	{
+		"name_romanized": "Wakabayashi Rui",
+		"company": "Candlenut",
+		"grade": "B",
+		"status": "e",
+		"id": 36
+	},
+	{
+		"name_romanized": "Kwon Hyunwoo",
+		"company": "Artemis Ent",
+		"grade": "B",
+		"status": "e",
+		"id": 37
+	},
+	{
+		"name_romanized": "Gil Soohyun",
+		"company": "Individual",
+		"grade": "B",
+		"status": "e",
+		"id": 38
+	},
+	{
+		"name_romanized": "Jeon Jeongsuk",
+		"company": "Empire Music",
+		"grade": "B",
+		"status": "e",
+		"id": 39
+	},
+	{
+		"name_romanized": "Jung Hyojung",
+		"company": "Empire Music",
+		"grade": "B",
+		"status": "e",
+		"id": 40
+	}
+]

@@ -15,6 +15,12 @@ function readFromCSV(path) {
   rawFile.send(null);
 }
 
+// function readFromCSV() {
+//   let out = [["Cha Hyunjin", "Individual","B","t","1"],["Park Seunghyeon","Empire Music","A","t","2"]];
+//   let trainees = convertCSVArrayToTraineeData(out);
+//   populateTable(trainees);
+// }
+
 function findTraineeById(id) {
   for (let i = 0; i < trainees.length; i++) {
     if (id === trainees[i].id) { // if trainee's match
@@ -69,7 +75,7 @@ trainee: {
   image: ...
   selected: false/true // whether user selected them
   eliminated: false/true
-  top12: false/true
+  top7: false/true
 }
 */
 function convertCSVArrayToTraineeData(csvArrays) {
@@ -79,7 +85,7 @@ function convertCSVArrayToTraineeData(csvArrays) {
     trainee.company = traineeArray[1];
     trainee.grade = traineeArray[2];
     trainee.eliminated = traineeArray[3] === 'e'; // sets trainee to be eliminated if 'e' appears in 6th col
-    trainee.top12 = traineeArray[3] === 't'; // sets trainee to top 12 if 't' appears in 6th column
+    trainee.top7 = traineeArray[3] === 't'; // sets trainee to top 12 if 't' appears in 6th column
     trainee.id = parseInt(traineeArray[4]) - 1; // trainee id is the original ordering of the trainees in the first csv
     trainee.image =
       trainee.name_romanized.replace(" ", "").replace("-", "").toLowerCase() + ".jpg";
@@ -168,15 +174,15 @@ function populateTable(trainees) {
 
 function populateTableEntry(trainee) {
   // eliminated will have value "eliminated" only if trainee is eliminated and showEliminated is true, otherwise this is ""
-  let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top12 = (showTop12 && trainee.top12) && "top12";
+  let eliminated = (showEliminated && trainee.status === 'e') && "eliminated";
+  let top7 = (trainee.status === 'e') && "top7";
   const tableEntry = `
   <div class="table__entry ${eliminated}">
     <div class="table__entry-icon">
       <img class="table__entry-img" src="assets/trainees/${trainee.image}" />
       <div class="table__entry-icon-border ${trainee.grade.toLowerCase()}-rank-border"></div>
       ${
-        top12 ? '<div class="table__entry-icon-crown"></div>' : ''
+        top7 ? '<div class="table__entry-icon-crown"></div>' : ''
       }
       ${
         trainee.selected ? '<img class="table__entry-check" src="assets/check.png"/>' : ""
@@ -199,6 +205,7 @@ function populateRanking() {
   let currRank = 1;
   for (let i = 0; i < rowNums.length; i++) {
     let rankRow = rankRows[i];
+    console.log('rabj', rankRow);
     for (let j = 0; j < rowNums[i]; j++) {
       let currTrainee = ranking[currRank-1];
       rankRow.insertAdjacentHTML("beforeend", populateRankingEntry(currTrainee, currRank))
@@ -232,7 +239,7 @@ function populateRankingEntry(trainee, currRank) {
   let modifiedCompany = trainee.company.toUpperCase();
   modifiedCompany = modifiedCompany.replace("ENTERTAINMENT", "ENT.");
   let eliminated = (showEliminated && trainee.eliminated) && "eliminated";
-  let top12 = (showTop12 && trainee.top12) && "top12";
+  let top7 = (trainee.status === 't') && "top7";
   const rankingEntry = `
   <div class="ranking__entry ${eliminated}">
     <div class="ranking__entry-view">
@@ -242,7 +249,7 @@ function populateRankingEntry(trainee, currRank) {
       </div>
       <div class="ranking__entry-icon-badge bg-${trainee.grade.toLowerCase()}">${currRank}</div>
       ${
-        top12 ? '<div class="ranking__entry-icon-crown"></div>' : ''
+        top7 ? '<div class="ranking__entry-icon-crown"></div>' : ''
       }
     </div>
     <div class="ranking__row-text">
@@ -365,7 +372,7 @@ var trainees = [];
 var filteredTrainees = [];
 // holds the ordered list of rankings that the user selects
 var ranking = newRanking();
-const rowNums = [1, 2, 4, 5];
+const rowNums = [1, 2, 3];
 //window.addEventListener("load", function () {
   populateRanking();
   readFromCSV("./trainee_info.csv");
